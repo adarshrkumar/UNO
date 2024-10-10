@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header, body > .decks {
+  height: 25.996533795493935vh; /*150px*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body > *:not(.main) ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-left: 0;
+  margin: 0;
+}
+
+body > *:not(.main) ul:not(ul > ul) {
+  margin-left: 1em;
+}
+
+.header > ul {
+  height: calc(100% - 4em);
+  width: calc(100% - 4em);
+}
+
+body > .decks > ul {
+  height: calc(100% - 2em);
+  width: calc(100% - 2em);
+}
+
+body > .decks > ul > ul:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+body > .decks > ul > ul:last-child {
+  padding-right: 1em;
+  height: 100%;
+  flex: 1;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+body > *:not(.main) > ul > li, 
+body > *:not(.main) > ul > ul:first-child > li:last-child {
+  padding: 1em 1.5em;
+  border-radius: 15px;
+  font-size: 2.7729636048526864vh /*16px*/;
+  border: solid 0.1733102253032929vh /*1px*/ black;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body > *:not(.main) > ul > ul > li.card {
+  border-radius: 15px;
+  font-size: 4.332755632582322vh /*25px*/;
+  border: solid 0.1733102253032929vh /*1px*/ black;  
+  height: calc(100% - 0.3466204506065858vh);
+  width: calc(calc(25.996533795493935vh + 3em) * calc(3/7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body > .main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+body > .main > div#card {
+  border: solid 0.1733102253032929vh /*1px*/ black;
+  border-radius: 2.5996533795493932vh /*15px*/;
+  height: 100%;
+  width: calc(calc(100vh - 12.998266897746968vh /*75px*/) * calc(3/7));
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body > .main > div#card > span.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6.932409012131716vh /*40px*/;
+  width: 6.8578856152513vh /*39.57px*/;
+  height: 7.7417677642980935vh /*44.67px*/;
+  z-index: 2;
+  position: relative;
+}
+
+body > .main > div#card > span.name:nth-of-type(1) {
+  top: -0.1733102253032929vh /*-1px*/;
+  border-bottom-right-radius: 1.733102253032929vh /*10px*/;
+  border-bottom: solid 0.1733102253032929vh /*1px*/ black;
+  border-right: solid 0.1733102253032929vh /*1px*/ black;
+}
+
+body > .main > div#card > span.name:nth-of-type(2) {
+  top: -15.59792027729636vh /*-90px*/;
+  left: calc(calc(100% - 10.554592720970538vh /*60.9px*/) + 3.6395147313691507vh /*21px*/);
+  border-top-left-radius: 1.733102253032929vh /*10px*/;
+  border-left: solid 0.1733102253032929vh /*1px*/ black;
+  border-top: solid 0.1733102253032929vh /*1px*/ black;
+}
+
+body > .main > div#card > div {
+  height: 100%;
+  position: relative;
+  top: -8.145580589254767vh /*-47px*/;
+}
+
+body > .main > div#card > div > span#icon {
+  position: relative;
+  left: -0.8665511265164645vh /*-5px*/;
+  font-size: 12.998266897746968vh /*75px*/;
+  width: calc(100% + 1.733102253032929vh /*10px*/);
+  height: calc(100%);
+  border: solid 0.1733102253032929vh /*1px*/ black;
+  border-radius: 50%;
+  rotate: 40deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+body > .main > div#card > div > span#icon > div {
+  box-shadow: 
+    white -36.39514731369151vh 0px, 
+    white 36.39514731369151vh 0px
+  ;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  width: 37.18544194107452vh;
+  height: 68%;
+  rotate: -40deg;
+  transform: translateX(-0.5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[onclick], [data-onclick] {
+  cursor: pointer;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Uno | RockGamerAK</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="/UNO_Logo_square.png" />
+  </head>
+  <body>
+    <header class="header">
+      <ul>
+        <li onclick="startGame()">Start Game</li>
+        <li data-onclick="newGame()" style="display: none;">New Game</li>
+        <li data-onclick="shuffleCards()">Shuffle Cards</li>
+      </ul>
+    </header>
+    <main class="main">
+      <div id="card" style="background-color: gray;">
+        <span class="name"></span>
+        <div>
+          <span id="icon">
+            <div></div>
+          </span>
+        </div>
+        <span class="name"></span>
+      </div>
+    </main>
+    <footer class="decks">
+      <ul id="user-1-deck" class="deck">
+        <ul>
+          <li>User #1</li>
+          <li data-onclick="drawCard('user1Deck', 'user')">Draw Card</li>
+          <li data-onclick="showDeck('user1Deck')" style="display: none;" class="show">Show Deck</li>
+        </ul>
+        <ul></ul>
+      </ul>
+      <ul id="user-2-deck" class="deck">
+        <ul>
+          <li>User #2</li>
+          <li data-onclick="drawCard('user2Deck', 'user')">Draw Card</li>
+          <li data-onclick="showDeck('user2Deck')" style="display: none;" class="show">Show Deck</li>
+        </ul>
+        <ul></ul>
+      </ul>
+    </footer>
+    <dialog></dialog>
+    <script src="/script.js"></script>
+  </body>
+</html>
